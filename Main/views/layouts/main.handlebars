@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Blog!</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="#">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Tech Blog</h1>
+    <a class="navbar-brand" href="/dashboard"></a>
+    <ul class="navbar-nav mr-auto">
+      {{#if logged_in}}
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/dashboard">Dashboard</a>
+      </li>
+      <nav>
+        <!-- Conditionally render login or logout links -->
+
+        <a id="logout" href="/">logout</a> |
+        {{!-- <button class="no-button" id="logout"></button> --}}
+        {{else}}
+        <a href="/login">login</a>
+        {{/if}}
+      </nav>
+      </header>
+      <main class="container container-fluid mt-5">
+        <!-- Render the sub layout -->
+        {{{ body }}}
+      </main>
+      <footer>
+        <div class="row-is-full content has-text-centered">
+          <p>
+            <a href="/">homepage</a>{{#if loggedIn}} |
+            <a href="/dashboard/">dashboard</a> |
+            <a href="/dashboard/Post/">Add a new post!</a>
+            {{else}}
+            | <a href="/login/">login</a>
+            {{/if}}
+          </p>
+        </div>
+      </footer>
+  </div>
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+
+</html>
