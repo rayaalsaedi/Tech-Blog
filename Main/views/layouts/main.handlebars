@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog!</title>
   <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="#">
 
 </head>
 
@@ -16,19 +15,24 @@
     <a class="navbar-brand" href="/dashboard"></a>
     <ul class="navbar-nav mr-auto">
       {{#if logged_in}}
-      <li class="nav-item active">
-        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="/dashboard">Dashboard</a>
-      </li>
+      <div class="topnav">
+        <li class="nav-item active">
+          <a class="home" href="/">Home <span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item">
+          <a class="dash" href="/dashboard">Dashboard</a>
+        </li>
+      </div>
       <nav>
         <!-- Conditionally render login or logout links -->
-
-        <a id="logout" href="/">logout</a> |
+        <button>
+          <a class="logout" href="/">logout</a> |
+        </button>
         {{!-- <button class="no-button" id="logout"></button> --}}
         {{else}}
-        <a href="/login">login</a>
+        <button class="login">
+          <a href="/login">login</a>
+        </button>
         {{/if}}
       </nav>
       </header>
@@ -39,12 +43,14 @@
       <footer>
         <div class="row-is-full content has-text-centered">
           <p>
-            <a href="/">homepage</a>{{#if loggedIn}} |
-            <a href="/dashboard/">dashboard</a> |
-            <a href="/dashboard/Post/">Add a new post!</a>
+          <ul>
+            <li><a href="/">homepage</a>{{#if loggedIn}} |</li>
+            <li><a href="/dashboard/">dashboard</a> |</li>
+            <li><a href="/dashboard/Post/">Add a new post!</a></li>
             {{else}}
             | <a href="/login/">login</a>
             {{/if}}
+          </ul>
           </p>
         </div>
       </footer>
