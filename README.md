@@ -11,3 +11,9 @@ This is a CMS-style blog site similar to a Wordpress site, where developers can 
 - MySQL
 
 # Screenshot:
+
+Homepage:
+![Search page with results screenshot](./develop/capture.png)
+
+Login page:
+![Search page with results screenshot](./develop/screen-capture.png)
