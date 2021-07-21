@@ -11,7 +11,8 @@
 
 <body>
   <div class="container">
-    <h1>Tech Blog</h1>
+    <h1 class="has-text-black px-3 py-3 has-text-weight-bold">Tech Blog</h1>
+    <nav class="navbar mt-2">
     <a class="navbar-brand" href="/dashboard"></a>
     <ul class="navbar-nav mr-auto">
       {{#if logged_in}}
@@ -39,6 +40,7 @@
       <main class="container container-fluid mt-5">
         <!-- Render the sub layout -->
         {{{ body }}}
+        </nav>
       </main>
       <footer>
         <div class="row-is-full content has-text-centered">
