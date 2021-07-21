@@ -10,10 +10,13 @@ This is a CMS-style blog site similar to a Wordpress site, where developers can 
 - Bcrypt
 - MySQL
 
+# Delpoyed Links:
+
+https://github.com/rayaalsaedi/Tech-Blog
+
+https://the-tech-blog-project.herokuapp.com/login
+
 # Screenshot:
 
 Homepage:
-![Search page with results screenshot](./develop/capture.png)
-
-Login page:
-![Search page with results screenshot](./develop/screen-capture.png)
+![Homepage](./Develop/capture.png)
