@@ -19,4 +19,4 @@ https://the-tech-blog-project.herokuapp.com/login
 # Screenshot:
 
 Homepage:
-![Homepage](./Develop/capture.png)
+![Homepage](./capture.png)
